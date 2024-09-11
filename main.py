@@ -4,12 +4,12 @@ def main():
     with open(BOOK) as f:
         file_contents = f.read()
         print(f"--- Begin the report of {BOOK} ---")
-        print(f"{count_words(file_contents)} words found in the document")
+        print(f"{count_words(file_contents)} words found in the document\n")
         dict = count_characters(file_contents)
         chars = characters_to_character_list(dict)
         chars.sort(reverse=True, key=sort_on)
         for char in chars:
-            print(f"The {char["name"]} character was found {char["num"]} times")
+            print(f"The '{char["name"]}' character was found {char["num"]} times")
         print("--- End Report ---")
     
 
